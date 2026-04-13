@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eu amo a vitoria</title>
+  <link rel="icon" href="heart.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vitoria.css">
+</head>
+<body>
+
+  <h1>eu amo a vitoria</h1>
+
+  <img src="kuromi2.png" class="kuromi">
+
+  <audio id="musica">
+    <source src="snakelikes.mp4" type="audio/mpeg">
+  </audio>
+
+  <div class="input-area">
+    <input id="mensagem" placeholder="eu te amo sabia?" class="inputao">
+    <button onclick="Verificar()" class="butao">enviar</button>
+  </div>
+
+  <button onclick="entrarArea()" class="secreto">Área secreta 🔒</button>
+
+  <p id="contador" class="contador"></p>
+
+  <p id="resultado" class="resultado"></p>
+
+  <div class="player">
+    <img src="capa.jpg" class="capa">
+    <img src="fonte.png" class="fonte">
+
+    <div class="botoes">
+      <img src="voltarleft.png" onclick="voltar()" class="voltar">
+      <img src="tocando.png" id="playBtn" onclick="tocarpausa()" class="tocando">
+      <img src="irright.png" onclick="proximo()" class="proxima">
+    </div>
+
+    <div class="barra-container">
+      <img src="gengar.gif" class="gengar">
+      <img src="player.png" class="barra">
+      <img src="bolinh3.png" class="bolinha" id="bolinha">
+    </div>
+  </div>
+
+  <div class="fotos">
+    <div class="foto1">
+      <img src="vitoria.jpg" alt="foto 1">
+      <img src="juras1.png" class="item">
+    </div>
+
+    <div class="foto2">
+      <img src="vitoriaa.jpg" alt="foto 2">
+      <img src="jura2.png" class="item2">
+    </div>
+  </div>
+
+  <script src="vitoria.js"></script>
+</body>
+</html>

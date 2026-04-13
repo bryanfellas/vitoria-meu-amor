@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(100deg, #8e2de2, #ff6ec4);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: clamp(22px, 6vw, 32px);
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,110,196,0.8);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.kuromi {
+  width: clamp(80px, 25vw, 150px);
+  transition: transform 0.5s;
+}
+.kuromi:hover { transform: scale(1.2); }
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inputao {
+  flex: 1;
+  min-width: 160px;
+  background-color: black;
+  color: white;
+  font-family: Arial;
+  border-radius: 15px;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.butao {
+  background-color: blueviolet;
+  color: white;
+  font-family: Arial;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+  white-space: nowrap;
+}
+.butao:hover {
+  background-color: #ff6ec4;
+  transform: scale(1.1);
+}
+
+.secreto {
+  background-color: blueviolet;
+  color: white;
+  font-family: Arial;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+}
+.secreto:hover {
+  transform: scale(1.1);
+  background-color: #ff6ec4;
+}
+
+.contador {
+  width: 100%;
+  max-width: 480px;
+  font-size: clamp(14px, 4vw, 20px);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  padding: 10px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  transition: transform 0.5s;
+}
+.contador:hover { transform: scale(1.05); }
+
+.resultado {
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1.8;
+  min-height: 10px;
+}
+
+.player {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.capa {
+  width: clamp(120px, 40vw, 160px);
+  border-radius: 15px;
+}
+
+.fonte {
+  width: 100%;
+  max-width: 260px;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.voltar, .proxima {
+  width: clamp(36px, 10vw, 50px);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.voltar:hover, .proxima:hover { transform: scale(1.2); }
+
+.tocando {
+  width: clamp(44px, 12vw, 60px);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.tocando:hover { transform: scale(1.2); }
+
+.barra-container {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gengar {
+  width: clamp(80px, 25vw, 160px);
+  transition: transform 0.5s;
+  margin-bottom: 8px;
+}
+.gengar:hover { transform: scale(1.3); }
+
+.barra {
+  width: 100%;
+}
+
+.bolinha {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: clamp(16px, 5vw, 25px);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fotos {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-bottom: 40px;
+}
+
+.foto1, .foto2 {
+  position: relative;
+  width: clamp(130px, 40vw, 200px);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.foto1 img:first-child,
+.foto2 img:first-child {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.item, .item2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: aliceblue;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+  z-index: 2;
+  border-radius: 0 0 15px 15px;
+}
+
+.foto1:hover .item,
+.foto2:hover .item2 {
+  transform: translateY(0);
+}
+
+.rosa, .heart {
+  position: fixed;
+  top: -50px;
+  width: clamp(24px, 5vw, 40px);
+  animation: cair linear infinite;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes cair {
+  0%   { transform: translateY(-50px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@media (max-width: 400px) {
+  .fotos { gap: 10px; }
+  .botoes { gap: 10px; }
+  .contador { font-size: 13px; padding: 8px 12px; }
+}
