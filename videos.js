@@ -10,7 +10,7 @@ function enviar() {
   const formData = new FormData();
   formData.append("video", file);
 
-  fetch("http://127.0.0.1:3000/upload", {
+  fetch("servidor-production-905b.up.railway.app", {
     method: "POST",
     body: formData
   })
