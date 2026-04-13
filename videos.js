@@ -21,7 +21,7 @@ function enviar() {
 }
 
 function carregarVideos() {
-  fetch("http://127.0.0.1:3000/listar-videos")
+  fetch("servidor-production-905b.up.railway.app/listar-videos")
     .then(res => res.json())
     .then(files => {
       const lista = document.getElementById("lista");
@@ -42,7 +42,7 @@ function tocarVideo(nome) {
   player.innerHTML = "";
 
   const video = document.createElement("video");
-  video.src = "http://127.0.0.1:3000/videos/" + nome;
+  video.src = "servidor-production-905b.up.railway.app/videos/" + nome;
   video.controls = true;
   video.preload = "none";
 
