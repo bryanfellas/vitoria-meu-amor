@@ -10,7 +10,7 @@ function enviar() {
   const formData = new FormData();
   formData.append("video", file);
 
-  fetch("servidor-production-905b.up.railway.app", {
+  fetch("https://servidor-production-905b.up.railway.app", {
     method: "POST",
     body: formData
   })
@@ -21,7 +21,7 @@ function enviar() {
 }
 
 function carregarVideos() {
-  fetch("servidor-production-905b.up.railway.app/listar-videos")
+  fetch("https://servidor-production-905b.up.railway.app/listar-videos")
     .then(res => res.json())
     .then(files => {
       const lista = document.getElementById("lista");
@@ -42,7 +42,7 @@ function tocarVideo(nome) {
   player.innerHTML = "";
 
   const video = document.createElement("video");
-  video.src = "servidor-production-905b.up.railway.app/videos/" + nome;
+  video.src = "https://servidor-production-905b.up.railway.app/videos/" + nome;
   video.controls = true;
   video.preload = "none";
 
