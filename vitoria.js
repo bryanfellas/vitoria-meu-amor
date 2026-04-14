@@ -99,9 +99,19 @@ function Verificar() {
 
 function entrarArea() {
   const senha = prompt("Digite a senha ❤️");
-  if (senha === "vitoriaebryan") {
-    window.location.href = "areasecreta.html";
-  } else {
-    alert("Senha errada 😢");
-  }
+  if (!senha) return;
+
+  fetch("https://servidor-production-905b.up.railway.app/verificar-senha", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ senha })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.ok) {
+      window.location.href = "areasecreta.html";
+    } else {
+      alert("Senha errada 😢");
+    }
+  });
 }
