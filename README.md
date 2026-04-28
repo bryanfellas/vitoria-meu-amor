@@ -14,6 +14,7 @@ Input de senha
 Input fofo
 Informacoes completas entre eu e ela
 Animacoes top
+Database para videos ficarem salvos
 Alta beleza
 ✅
 
@@ -32,6 +33,13 @@ Pré-visualização
 Acessar o projeto
 
 https://bryanfellas.github.io/vitoria-meu-amor/
+
+Abrir localmente
+
+```bash
+git clone https://github.com/bryanfellas/vitoria-meu-amor.git
+cd index.html
+```
 
 Rodar localmente
 
