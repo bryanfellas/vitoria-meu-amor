@@ -18,6 +18,7 @@ Database para videos ficarem salvos
 Alta beleza
 ✅
 
+Linguagens utilizadas
 HTML
 CSS
 JavaScript (puro)
